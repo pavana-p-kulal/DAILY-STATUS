@@ -1,0 +1,40 @@
+4 Program 4 c++ program to count the number of triplets in an array
+
+#include <iostream>
+#include <string>
+int main() {
+  int test_case, n;
+  int i, j, l, m, k, count = 0, sum = 0;
+  std::cin >> test_case;
+  for (i = 0; i < test_case; i++) {
+    std::cin >> n;
+    int arr[n];
+    for (j = 0; j < n; j++) {
+      std::cin >> arr[j];
+
+    }
+    for (l = 0; l < n; l++) {
+      for (m = l + 1; m < n; m++) {
+        sum = arr[l] + arr[m];
+        for (k = 0; k < n; k++) {
+          if (sum == arr[k]) {
+
+            count = count + 1;
+
+          }
+
+        }
+        sum = 0;
+
+      }
+
+    }
+    if (count == 0) {
+      std::cout << -1 << "\n";
+    } else {
+      std::cout << count << "\n";
+      count = 0;
+    }
+
+  }
+}
