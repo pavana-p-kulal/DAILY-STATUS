@@ -1,0 +1,12 @@
+1.	This is a Python Program to read a number n and print and compute the series “1+2+…+n=”.
+Problem Description
+The program takes a number n and prints and computes the series “1+2+…+n=”.
+n = input("Enter Number ")
+n = int (n)
+sum = 0
+for num in range(0, n+1, 1):
+    sum = sum+num
+print("SUM of first ", n, "numbers is: ", sum )
+
+
+ 
